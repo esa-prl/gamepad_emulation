@@ -34,6 +34,9 @@ To build from source, clone the latest version from this repository into your ro
 	cd ../
 	colcon build --symlink-install
 
+To install the dependency pynput use
+	rosdep install -y -r -q --from-paths src --ignore-src --rosdistro eloquent 
+
 Adding `--symlink-install` to `colcon build` eliminates the need to recompile the package after changing the code.
 
 
