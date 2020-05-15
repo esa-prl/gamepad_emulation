@@ -20,7 +20,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'gamepad_emulation = gamepad_emulation.gamepad_emulation:main'
+            'gamepad_emulation_node = gamepad_emulation.gamepad_emulation:main'
         ],
     },
 )
