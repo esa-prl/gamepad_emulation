@@ -13,13 +13,18 @@ Left joystick:
     a    s    d
     z    x    c
 
+Right joystick:
+    t    y    u
+    g    h    j
+    b    n    m
+
 D-Pad:
     arrow keys
 
-Buttons for locomotion modes:
-1: Simple rover locomotion
-2: Stop mode
-3: Wheel walking
+Buttons:
+    X: 1
+    B: 2
+    Y: 3
 
 ESC to exit
 """
