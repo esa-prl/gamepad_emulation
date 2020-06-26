@@ -27,6 +27,12 @@ Front buttons:
     B: 3
     Y: 4
 
+Back buttons:
+    LB: 5
+    RB: 6
+    LT: 7
+    RT: 8
+
 ESC to exit
 """
 
@@ -61,11 +67,18 @@ dPadBindings = {
     Key.up:    (0.0, 0.0, 0.0, 0.0,  0.0,  1.0),
 }
 
-buttonBindings = {
+frontButtonBindings = {
     '1': (1, 0, 0, 0, 0, 0, 0, 0, 0),
     '2': (0, 1, 0, 0, 0, 0, 0, 0, 0),
     '3': (0, 0, 1, 0, 0, 0, 0, 0, 0),
     '4': (0, 0, 0, 1, 0, 0, 0, 0, 0),
+}
+
+backButtonBindings = {
+    '5': (0, 0, 0, 0, 1, 0, 0, 0, 0),
+    '6': (0, 0, 0, 0, 0, 1, 0, 0, 0),
+    '7': (0, 0, 0, 0, 0, 0, 1, 0, 0),
+    '8': (0, 0, 0, 0, 0, 0, 0, 1, 0),
 }
 
 
@@ -106,9 +119,13 @@ class GamepadEmulation(Node):
         if key in dPadBindings.keys():
             self.joy_msg.axes = dPadBindings[key]
         elif key in leftJoystickBindings.keys():
-            self.joy_msg.axes = leftJoystickBindings[str(key)]
-        elif str(key) in buttonBindings.keys():
-            self.joy_msg.buttons = buttonBindings[str(key)]
+            self.joy_msg.axes = leftJoystickBindings[key]
+        elif key in rightJoystickBindings.keys():
+            self.joy_msg.axes = rightJoystickBindings[key]
+        elif key in frontButtonBindings.keys():
+            self.joy_msg.buttons = frontButtonBindings[key]
+        elif key in backButtonBindings.keys():
+            self.joy_msg.buttons = backButtonBindings[key]
         else:
             self.joy_msg.axes = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
             self.joy_msg.buttons = [0, 0, 0, 0, 0, 0, 0, 0, 0]
