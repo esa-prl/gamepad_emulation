@@ -10,28 +10,30 @@ as Joy messages. It works best with a US keyboard layout.
 ---------------------------
 Left joystick:
     q    w    e
-    a    s    d
+    a         d
     z    x    c
 
 Right joystick:
     t    y    u
-    g    h    j
+    g         j
     b    n    m
 
 D-Pad:
     arrow keys
 
-Front buttons:
-    X: 1
-    A: 2
-    B: 3
-    Y: 4
-
-Back buttons:
-    LB: 5
-    RB: 6
-    LT: 7
-    RT: 8
+Buttons:
+    1: X
+    2: A
+    3: B
+    4: Y
+    5: LB
+    6: RB
+    7: LT
+    8: RT
+    9: Back
+    0: Start
+    s: Button stick left
+    h: Button stick right
 
 ESC to exit
 """
@@ -66,17 +68,18 @@ dPadBindings = {
 }
 
 buttonBindings = {
-    '1': (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-    '2': (0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),
-    '3': (0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0),
-    '4': (0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0),
-    '5': (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0),
-    '6': (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),
-    '7': (0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0),
-    '8': (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),
-    '9': (0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),
-    's': (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),
-    'h': (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),
+    '1': (1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),  # X
+    '2': (0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),  # A
+    '3': (0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0),  # B
+    '4': (0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0),  # Y
+    '5': (0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0),  # LB
+    '6': (0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0),  # RB
+    '7': (0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0),  # LT
+    '8': (0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0),  # RT
+    '9': (0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0),  # Back
+    '0': (0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0),  # Start
+    's': (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0),  # Button stick left
+    'h': (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1),  # Button stick right
 }
 
 
@@ -124,7 +127,7 @@ class GamepadEmulation(Node):
             self.joy_msg.buttons = buttonBindings[key]
         else:
             self.joy_msg.axes = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
-            self.joy_msg.buttons = [0, 0, 0, 0, 0, 0, 0, 0, 0]
+            self.joy_msg.buttons = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     def on_release(self, key):
         if key == Key.esc:
