@@ -4,7 +4,7 @@
   <name>gamepad_emulation</name>
   <version>0.0.0</version>
   <description>Gamepad emulation with keyboard</description>
-  <maintainer email="max.ehrhardt@hotmail.de">root</maintainer>
+  <maintainer email="maximilian.ehrhardt@esa.int">root</maintainer>
   <license>TODO: License declaration</license>
 
   <depend>pynput-pip</depend>

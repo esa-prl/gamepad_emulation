@@ -12,7 +12,7 @@ The source code is released under a [TODO: Add Licence]()).
 
 **Author: Maximilian Ehrhardt<br />
 Affiliation: [European Space Agency](https://www.esa.int/)<br />
-Maintainer: maximilian Ehrhardt, maximilian.ehrhardt@esa.int**
+Maintainer: Maximilian Ehrhardt, maximilian.ehrhardt@esa.int**
 
 The Gamepad Emulation package has been tested under [ROS2] Eloquent and Ubuntu 18.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
 
