@@ -5,7 +5,7 @@
   <version>0.0.0</version>
   <description>Gamepad emulation with keyboard</description>
   <maintainer email="maximilian.ehrhardt@esa.int">root</maintainer>
-  <license>TODO: License declaration</license>
+  <license>GPLv3</license>
 
   <depend>pynput-pip</depend>
   <test_depend>ament_copyright</test_depend>

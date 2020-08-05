@@ -8,7 +8,7 @@ This package emulates the input of a gamepad with the computer keyboard.
 
 ### License
 
-The source code is released under a [TODO: Add Licence]()).
+The source code is released under a [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.nl.html)).
 
 **Author: Maximilian Ehrhardt<br />
 Affiliation: [European Space Agency](https://www.esa.int/)<br />
