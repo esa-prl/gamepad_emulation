@@ -8,13 +8,13 @@ This package emulates the input of a gamepad with the computer keyboard.
 
 ### License
 
-The source code is released under a [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.nl.html)).
+The source code is released under a [GPLv3 license](https://www.gnu.org/licenses/gpl-3.0.en.html).
 
 **Author: Maximilian Ehrhardt<br />
 Affiliation: [European Space Agency](https://www.esa.int/)<br />
 Maintainer: Maximilian Ehrhardt, maximilian.ehrhardt@esa.int**
 
-The Gamepad Emulation package has been tested under [ROS2] Eloquent and Ubuntu 18.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
+The Gamepad Emulation package has been tested under [ROS2] Foxy Fitzroy and Ubuntu 20.04. This is research code, expect that it changes often and any fitness for a particular purpose is disclaimed.
 
 ## Installation
 
@@ -35,7 +35,7 @@ To build from source, clone the latest version from this repository into your ro
 	colcon build --symlink-install
 
 To install the dependency pynput use
-	rosdep install -y -r -q --from-paths src --ignore-src --rosdistro eloquent 
+	rosdep install -y -r -q --from-paths src --ignore-src --rosdistro foxy 
 
 Adding `--symlink-install` to `colcon build` eliminates the need to recompile the package after changing the code.
 
