@@ -58,7 +58,7 @@ Emulates the input of a gamepad by using the computer keyboard.
 
 #### Published Topics
 
-* **`/joy`** ([/sensor_msgs/Joy])
+* **`/joy`** ([sensor_msgs/Joy])
 
     Containing emulated buttons pressed and emulated movement of joystick. 
 
