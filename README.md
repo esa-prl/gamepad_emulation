@@ -45,6 +45,10 @@ Adding `--symlink-install` to `colcon build` eliminates the need to recompile th
 Run the main node with:
 
 	ros2 run gamepad_emulation gamepad_emulation_node
+	
+To use the node with the esa-prl software stack you have to remap the joy topic:
+
+	ros2 run gamepad_emulation gamepad_emulation_node --ros-args -r joy:=gamepad
 
 ## Nodes
 
