@@ -49,6 +49,8 @@ Run the main node with:
 To use the node with the esa-prl software stack you have to remap the joy topic:
 
 	ros2 run gamepad_emulation gamepad_emulation_node --ros-args -r joy:=gamepad
+	
+The gamepad_emulation will run buggy, when an actual gamepad is connected, since the messages will clash.
 
 ## Nodes
 
